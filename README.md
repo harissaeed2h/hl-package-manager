@@ -9,5 +9,5 @@ This package manager is built to install packages when apt demands hashes, it ca
 
 **This is all, the server is up and running and you can install packages using hlpm locally**
 
-<span style="color: #2ECC71;">**NOT DANGEROUS**</span>
+<span style="color: #2ECC71;">NOT DANGEROUS</span>
 <span style="color: #F39C12;">**WARNING, USE THIS PROGRAM IF YOU ARE SURE THE SERVER HOLDS LEGITEMATE PACKAGES AS THIS PROGRAM IS BUILT FOR CLOSED INTRANETS WITH LIMITED STORAGE AND RESOURCES HENCE THIS PROGRAM IS NOT A PERFECTIONIS AND MEANT FOR PURE PERFORMANCE AND EASE OF USE, THIS MAY CAUSE APT TO WANT TO FIX THEM FIRST**</span>
