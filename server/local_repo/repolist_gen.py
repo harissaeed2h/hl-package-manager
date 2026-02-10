@@ -10,7 +10,7 @@ def displayProgress(packages, packagesTemp):
 	oldPercentage = newPercentage
 	newPercentage = int(len(packages.keys())/len(packagesTemp)*100)
 	if oldPercentage != newPercentage:
-		print(newPercentage)
+		print(f"{newPercentage}%")
 
 def initialize():
 	lsOutput = subprocess.run("find ./ubuntu/ -type f".split(" "), stdout=subprocess.PIPE, text=True)
@@ -40,6 +40,7 @@ def savePackagesData(packages):
 		json.dump(packages, f)
 
 def main():
+	initialize()
 	with open("repo.map", "r") as f:
 		lsOutput = f.read()
 	packagesTemp = lsOutput.split("\n")

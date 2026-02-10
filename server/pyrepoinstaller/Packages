@@ -1,0 +1,23 @@
+Package: accountsservice
+Architecture: amd64
+Version: 23.13.9-2ubuntu6
+Priority: optional
+Section: gnome
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian freedesktop.org maintainers <pkg-freedesktop-maintainers@lists.alioth.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 524
+Depends: default-dbus-system-bus | dbus-system-bus, libaccountsservice0 (= 23.13.9-2ubuntu6), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.79.0), libpolkit-gobject-1-0 (>= 0.99)
+Recommends: default-logind | logind, polkitd
+Suggests: gnome-control-center
+Filename: pool/main/a/accountsservice/accountsservice_23.13.9-2ubuntu6_amd64.deb
+Size: 71126
+MD5sum: 7bb2c4b0289d8db1b51dd4db0d9b4b40
+SHA1: 021568ec4fd93cff8234576a77418a61937a37bc
+SHA256: 92cff947a1b7026d24942de445459d9fbf3cb7254efb98cd581cb4921a4380fd
+SHA512: 4b23078f8ca67de99975960913965bd49cc3e08b4f55720f638ec607229ae32751660c3b4e4a5fee0b925e9f2a6790f6680134ca8e01cdff9fba56e4f96701c5
+Homepage: https://www.freedesktop.org/wiki/Software/AccountsService/
+Description: query and manipulate user account information
+Task: ubuntu-desktop-minimal, ubuntu-desktop, ubuntu-desktop-raspi, kubuntu-desktop, xubuntu-minimal, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop-core, ubuntustudio-desktop, ubuntukylin-desktop, ubuntukylin-desktop-minimal, ubuntu-mate-core, ubuntu-mate-desktop, ubuntu-budgie-desktop-minimal, ubuntu-budgie-desktop, ubuntu-budgie-desktop-raspi, ubuntu-unity-desktop, edubuntu-desktop-gnome-minimal, edubuntu-desktop-gnome-raspi, ubuntucinnamon-desktop-minimal, ubuntucinnamon-desktop-raspi
+Description-md5: 8aeed0a03c7cd494f0c4b8d977483d7e

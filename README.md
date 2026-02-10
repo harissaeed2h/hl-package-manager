@@ -4,7 +4,9 @@ This is a local package manager, haris local package manager (hlpm), this packag
 This package manager is built to install packages when apt demands hashes, it can be used instead if you want to build an intra net at a low budget.
 
 **HOW TO USE**
-1) Place the local_repo folder in your home directory, **if you want to put it elsewhere, please change localRoot in pyrepoinstaller/downloader.py and downloadDirectory in mklinks.sh**
-2) Place hlpm at any location or used a compiled version and place it in /usr/bin/
+1) **Go to the server folder and execute the setup.sh file on the server**, this will setup the repository by downloading the main branch of noble, you may change the Packages file to contain whatever packages you may want. You can also remove the python server from the file and use another service like apache or nginx as well.
+2) **Execute the main.py file on the client side, change variables in config.py as required** default server address is localhost:80
 
-**THIS PACKAGE IS STILL UNDER WORK, INSTALLERS MAY NOT WORK RIGHT, YOU MAY NEED TO SET IT UP MANUALLY**
+**This is all, the server is up and running and you can install packages using hlpm locally**
+
+**WARNING, USE THIS PROGRAM IF YOU ARE SURE THE SERVER HOLDS LEGITEMATE PACKAGES AS THIS PROGRAM IS BUILT FOR CLOSED INTRANETS WITH LIMITED STORAGE AND RESOURCES HENCE THIS PROGRAM IS NOT A PERFECTIONIS AND MEANT FOR PURE PERFORMANCE AND EASE OF USE**

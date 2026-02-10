@@ -6,16 +6,25 @@ from config import repositorServerAddress, hlpmDefaultDir
 
 repoListData = {}
 userHomeDir = Path.home()
+repoListFilePath = os.path.join(userHomeDir, "hlpm/repo.list")
 
 def init():
 	global repoListData
 	try:
-		with open("repo.list") as f:
+		response = requests.get(repositorServerAddress+"repo.list")
+		with open(repoListFilePath, "wb") as f:
+			f.write(response.content)
+	except:
+		with open(repoListFilePath, "wb") as f:
+			json.dumps("{}")
+		print("W: Unable to update the repolist. You may ignore this")
+	try:
+		with open(repoListFilePath) as f:
 			repoListData = f.read()
 			repoListData = json.loads(repoListData)
 			for packageName in repoListData.keys():
 				repoListData[packageName]["file"] = repositorServerAddress+repoListData[packageName]["file"][2:]
-				print(repoListData[packageName]["file"])
+				#DEBUG?: print(f"{repoListData[packageName]["file"]}")
 	except:
 		print("error while trying to load repository list. Please try running the 'get repolist' command")
 	try:
@@ -72,6 +81,10 @@ def processCommand(command):
 	elif command[0] == "install":
 		for packageName in command[1].split(","):
 			installPackage(packageName)
+	elif command[0] == "init":
+		init()
+	else:
+		return "Command not found"
 	return "Command Executed"
 
 def main():
@@ -79,9 +92,9 @@ def main():
 	autocomplete(list(repoListData.keys()))
 	while True:
 		command = input("> ")
-		#try:
-		print(processCommand(command))
-		#except:
-			#print("Unknown error while executing command; E001")
+		try:
+			print(processCommand(command))
+		except:
+			print("Unknown error while executing command; E001")
 
 main()
